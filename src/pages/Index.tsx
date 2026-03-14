@@ -1,12 +1,30 @@
-// Update this page (the content is just a fallback if you fail to update the page)
+import HeroSection from "@/components/HeroSection";
+import ExperienceSection from "@/components/ExperienceSection";
+import SkillsSection from "@/components/SkillsSection";
+import BlogSection from "@/components/BlogSection";
 
 const Index = () => {
   return (
-    <div className="flex min-h-screen items-center justify-center bg-background">
-      <div className="text-center">
-        <h1 className="mb-4 text-4xl font-bold">Welcome to Your Blank App</h1>
-        <p className="text-xl text-muted-foreground">Start building your amazing project here!</p>
-      </div>
+    <div className="min-h-screen bg-background">
+      <HeroSection />
+      <div className="border-t border-border" />
+      <ExperienceSection />
+      <div className="border-t border-border" />
+      <SkillsSection />
+      <div className="border-t border-border" />
+      <BlogSection />
+
+      {/* Footer */}
+      <footer className="border-t border-border py-8">
+        <div className="container mx-auto px-6 flex items-center justify-between">
+          <span className="font-mono text-xs text-muted-foreground">
+            © 2026 Yahir Rivera Flores
+          </span>
+          <span className="font-mono text-[10px] text-muted-foreground tracking-wider">
+            BUILT WITH HIGH PERFORMANCE
+          </span>
+        </div>
+      </footer>
     </div>
   );
 };
