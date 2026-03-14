@@ -35,7 +35,7 @@ Deno.serve(async (req) => {
     };
 
     // Get user info
-    const userRes = await fetch(`${GATEWAY_URL}/helix/users?login=${encodeURIComponent(login)}`, {
+    const userRes = await fetch(`${GATEWAY_URL}/users?login=${encodeURIComponent(login)}`, {
       headers,
     });
     const userData = await userRes.json();
