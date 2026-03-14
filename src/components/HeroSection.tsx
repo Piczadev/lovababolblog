@@ -21,9 +21,9 @@ const HeroSection = () => {
       <motion.div
         animate={{ y: [-15, 15, -15] }}
         transition={{ duration: 8, ease: "easeInOut", repeat: Infinity }}
-        className="absolute top-[15%] -right-16 md:right-10 lg:right-32 w-full max-w-[280px] md:max-w-md lg:max-w-lg opacity-60 mix-blend-screen pointer-events-none z-0"
+        className="absolute top-[15%] -right-16 md:right-10 lg:right-32 w-full max-w-[280px] md:max-w-md lg:max-w-lg opacity-[0.25] mix-blend-screen pointer-events-none z-0"
         style={{
-          filter: "drop-shadow(0 2px 4px rgba(255, 255, 255, 0.1)) drop-shadow(0 0 20px rgba(111, 44, 255, 0.6))"
+          filter: "drop-shadow(0 2px 4px rgba(255, 255, 255, 0.03)) drop-shadow(0 0 15px rgba(111, 44, 255, 0.2))"
         }}
       >
         <img src={imgcode} alt="Code Snippet Decoration" className="w-full h-auto object-contain" />
@@ -37,10 +37,10 @@ const HeroSection = () => {
           className="relative mb-2 group"
         >
           {/* Subtle glow behind the avatar */}
-          <div className="absolute inset-0 bg-primary/20 rounded-full blur-xl group-hover:bg-primary/40 transition-colors duration-500" />
+          <div className="absolute inset-0 bg-primary/10 rounded-full blur-2xl group-hover:bg-primary/20 transition-colors duration-700" />
           {/* Avatar container */}
-          <div className="relative w-24 h-24 sm:w-28 sm:h-28 rounded-full border border-border/50 overflow-hidden bg-background shadow-[0_0_15px_rgba(168,85,247,0.15)] group-hover:border-primary/50 group-hover:shadow-[0_0_25px_rgba(168,85,247,0.3)] transition-all duration-500">
-            <img src={avatar} alt="Yahir Rivera Flores" className="w-full h-full object-cover grayscale-[30%] group-hover:grayscale-0 transition-all duration-500" />
+          <div className="relative w-24 h-24 sm:w-28 sm:h-28 rounded-full border border-border/30 overflow-hidden bg-background/50 shadow-[0_0_10px_rgba(168,85,247,0.05)] group-hover:border-primary/40 group-hover:shadow-[0_0_20px_rgba(168,85,247,0.15)] transition-all duration-700">
+            <img src={avatar} alt="Yahir Rivera Flores" className="w-full h-full object-cover grayscale-[20%] opacity-90 group-hover:grayscale-0 group-hover:opacity-100 transition-all duration-700" />
           </div>
         </motion.div>
 
@@ -50,7 +50,7 @@ const HeroSection = () => {
           transition={{ duration: 0.8, delay: 0.1 }}
           className="font-display font-bold text-5xl md:text-7xl lg:text-8xl tracking-tight text-foreground"
         >
-          Yahir Rivera <span className="bg-clip-text text-transparent bg-gradient-to-r from-primary/90 to-primary/50">Flores</span>
+          Yahir Rivera <span className="bg-clip-text text-transparent bg-gradient-to-r from-primary/80 to-primary/40 opacity-90">Flores</span>
         </motion.h1>
 
         <motion.p
