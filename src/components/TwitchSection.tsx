@@ -18,7 +18,7 @@ interface TwitchStream {
   started_at: string;
 }
 
-const TWITCH_LOGIN = "piczadev";
+const TWITCH_LOGIN = "piczadev0";
 
 const TwitchSection = () => {
   const [user, setUser] = useState<TwitchUser | null>(null);
