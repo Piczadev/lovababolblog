@@ -1,73 +1,63 @@
-# Welcome to your Lovable project
+# Portafolio Web3 & IA - Yahir Rivera
 
-## Project info
+Este repositorio contiene el código fuente de mi portafolio web personal, diseñado bajo una estética **Dark Mode Tech Minimalista**. El objetivo principal es ofrecer una experiencia editorial inmersiva que consolide mis artículos de blog, newsletter, y experiencia profesional en la intersección de la Inteligencia Artificial y Web3.
 
-**URL**: https://lovable.dev/projects/REPLACE_WITH_PROJECT_ID
+---
 
-## How can I edit this code?
+## 🛠️ Stack Tecnológico
 
-There are several ways of editing your application.
+El proyecto está construido priorizando el rendimiento, tipado estricto y micro-interacciones inmersivas:
 
-**Use Lovable**
+- **[React](https://react.dev/) + [Vite](https://vitejs.dev/)**: Framework de UI y un empaquetador ultrarrápido para el ciclo de desarrollo.
+- **[TypeScript](https://www.typescriptlang.org/)**: Tipado estático de nivel de producción garantizando escalabilidad y minimizando errores.
+- **[Tailwind CSS](https://tailwindcss.com/)**: Framework de utilidades para el estilizado y soporte de Dark Mode nativo.
+- **[Framer Motion](https://www.framer.com/motion/)**: Motor de animaciones declarativas (gestión de scroll reveals, flotación y micro-interacciones hover).
+- **[Lucide React](https://lucide.dev/)**: Iconografía SVG limpia e integrada armónicamente.
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/REPLACE_WITH_PROJECT_ID) and start prompting.
+---
 
-Changes made via Lovable will be committed automatically to this repo.
+## 🏛️ Arquitectura de Datos (Separation of Concerns)
 
-**Use your preferred IDE**
+Para asegurar la fácil mantenibilidad del contenido, la lógica de la UI está completamente desacoplada de los datos duros mediante el componente central de configuración.
 
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
+**Para actualizar entradas del Blog o Experiencia Laboral:**
+1. No modifiques los componentes de UI (`HeroSection.tsx`, `AboutSection.tsx`, etc.).
+2. Dirígete exclusivamente al archivo **`src/data/config.ts`**.
+3. Modifica los arreglos exportables (`blogPosts` y `experienceData`). El renderizado reaccionará automáticamente a estos cambios preservando estilos y animaciones.
 
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
+---
 
-Follow these steps:
+## 🚀 Configuración Local
 
-```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
+Sigue estos pasos para correr el entorno de desarrollo localmente:
 
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
-
-# Step 3: Install the necessary dependencies.
-npm i
-
-# Step 4: Start the development server with auto-reloading and an instant preview.
-npm run dev
+### 1. Clonar e Instalar Dependencias
+Asegúrate de tener Node.js instalado. Clona el repositorio y ejecuta:
+```bash
+npm install
 ```
 
-**Edit a file directly in GitHub**
+### 2. Configuración de Variables de Entorno (.env)
+Este proyecto requiere configuración adicional para el Newsletter (Webhook).
+- Copia la plantilla de variables de entorno:
+```bash
+cp .env.example .env.local
+```
+- Abre el archivo `.env.local` y añade la URL de tu API o Webhook (ej. Formspree/Make) en la variable:
+  `VITE_NEWSLETTER_WEBHOOK="https://tu-endpoint-aqui.com"`
 
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
+### 3. Ejecutar Servidor de Desarrollo
+Levanta Vite de manera local:
+```bash
+npm run dev
+```
+El servidor debería desplegar el sitio (por defecto en `http://localhost:5173`).
 
-**Use GitHub Codespaces**
+---
 
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
-
-## What technologies are used for this project?
-
-This project is built with:
-
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
-
-## How can I deploy this project?
-
-Simply open [Lovable](https://lovable.dev/projects/REPLACE_WITH_PROJECT_ID) and click on Share -> Publish.
-
-## Can I connect a custom domain to my Lovable project?
-
-Yes, you can!
-
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
-
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/features/custom-domain#custom-domain)
+## ⚙️ Compilación de Producción
+Para generar una versión optimizada para despliegue (Netlify, Vercel, o similar):
+```bash
+npm run build
+```
+Los archivos minificados listos para hospedar se generarán en la carpeta `dist/`.

@@ -1,52 +1,32 @@
 import Navbar from "@/components/Navbar";
 import HeroSection from "@/components/HeroSection";
+import AboutSection from "@/components/AboutSection";
+import BlogNewsletterSection from "@/components/BlogNewsletterSection";
 import LinksSection from "@/components/LinksSection";
-import ExperienceSection from "@/components/ExperienceSection";
-import SkillsSection from "@/components/SkillsSection";
-import EducationSection from "@/components/EducationSection";
-import BlogSection from "@/components/BlogSection";
-import TwitchSection from "@/components/TwitchSection";
 
 const Index = () => {
   return (
-    <div className="min-h-screen bg-background">
+    <div className="min-h-screen bg-background text-foreground transition-colors duration-500">
       <Navbar />
       <HeroSection />
 
-      <div className="max-w-4xl mx-auto px-6">
+      <div className="max-w-5xl mx-auto px-6">
         <hr className="border-border/50" />
+      </div>
+      <AboutSection />
+
+      <div className="max-w-5xl mx-auto px-6">
+        <div className="h-px bg-primary/20 w-full shadow-[0_0_15px_rgba(168,85,247,0.3)]" />
+      </div>
+      <BlogNewsletterSection />
+
+      <div className="max-w-5xl mx-auto px-6">
+        <div className="h-px bg-primary/20 w-full shadow-[0_0_15px_rgba(168,85,247,0.3)]" />
       </div>
       <LinksSection />
 
-      <div className="max-w-4xl mx-auto px-6">
-        <hr className="border-border/50" />
-      </div>
-      <ExperienceSection />
-
-      <div className="max-w-4xl mx-auto px-6">
-        <hr className="border-border/50" />
-      </div>
-      <SkillsSection />
-
-      <div className="max-w-4xl mx-auto px-6">
-        <hr className="border-border/50" />
-      </div>
-      <EducationSection />
-
-      <div className="max-w-4xl mx-auto px-6">
-        <hr className="border-border/50" />
-      </div>
-      <BlogSection />
-
-      <div className="max-w-4xl mx-auto px-6">
-        <hr className="border-border/50" />
-      </div>
-      <TwitchSection />
-
-      <footer className="py-12 text-center">
-        <span className="text-xs text-muted-foreground">
-          © 2026 Yahir Rivera Flores · Hecho con ☕ desde Puebla
-        </span>
+      <footer className="py-12 mt-12 text-center text-sm text-muted-foreground border-t border-border/50 bg-secondary/10">
+        <p className="font-sans">© {new Date().getFullYear()} Yahir Rivera Flores · Diseño Editorial & Dark Mode</p>
       </footer>
     </div>
   );
