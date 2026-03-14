@@ -1,29 +1,29 @@
 import HeroSection from "@/components/HeroSection";
+import LinksSection from "@/components/LinksSection";
 import ExperienceSection from "@/components/ExperienceSection";
 import SkillsSection from "@/components/SkillsSection";
+import EducationSection from "@/components/EducationSection";
 import BlogSection from "@/components/BlogSection";
 
 const Index = () => {
   return (
     <div className="min-h-screen bg-background">
       <HeroSection />
-      <div className="border-t border-border" />
+      <hr className="border-border max-w-2xl mx-auto" />
+      <LinksSection />
+      <hr className="border-border max-w-2xl mx-auto" />
       <ExperienceSection />
-      <div className="border-t border-border" />
+      <hr className="border-border max-w-2xl mx-auto" />
       <SkillsSection />
-      <div className="border-t border-border" />
+      <hr className="border-border max-w-2xl mx-auto" />
+      <EducationSection />
+      <hr className="border-border max-w-2xl mx-auto" />
       <BlogSection />
 
-      {/* Footer */}
-      <footer className="border-t border-border py-8">
-        <div className="container mx-auto px-6 flex items-center justify-between">
-          <span className="font-mono text-xs text-muted-foreground">
-            © 2026 Yahir Rivera Flores
-          </span>
-          <span className="font-mono text-[10px] text-muted-foreground tracking-wider">
-            BUILT WITH HIGH PERFORMANCE
-          </span>
-        </div>
+      <footer className="py-12 text-center">
+        <span className="text-xs text-muted-foreground">
+          © 2026 Yahir Rivera Flores
+        </span>
       </footer>
     </div>
   );
