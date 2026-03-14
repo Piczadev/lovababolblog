@@ -46,7 +46,7 @@ Deno.serve(async (req) => {
     const user = userData.data?.[0] || null;
 
     // Get stream info
-    const streamRes = await fetch(`${GATEWAY_URL}/helix/streams?user_login=${encodeURIComponent(login)}`, {
+    const streamRes = await fetch(`${GATEWAY_URL}/streams?user_login=${encodeURIComponent(login)}`, {
       headers,
     });
     const streamData = await streamRes.json();
