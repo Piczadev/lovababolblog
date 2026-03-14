@@ -35,7 +35,7 @@ const TwitchSection = () => {
         if (fnError) throw fnError;
         setUser(data.user);
         setStream(data.stream);
-      } catch (e: any) {
+      } catch (e: unknown) {
         console.error("Twitch fetch error:", e);
         setError("No se pudo cargar el estado de Twitch");
       } finally {
